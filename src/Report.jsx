@@ -1,6 +1,8 @@
+import PDFsheet from "./Reports/ReportGen.jsx";
+
 function Report() {
     return (
-        <div>The reports page</div>
+        <PDFsheet />
     );
 }
 
