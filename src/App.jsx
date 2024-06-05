@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
@@ -15,7 +16,20 @@ function App() {
   return (
     <div className="container">
       <h1>Welcome to the Mission Planning Tool!</h1>
-
+      <nav>
+        <ul>
+          <li>
+            <a href={`/upload`}>Upload</a>
+          </li>
+          <li>
+            <a href={`/scenario`}>Scenario</a>
+          </li>
+          <li>
+            <a href={`/report`}>Report</a>
+          </li>
+        </ul>
+      </nav>
+      <Outlet />
       <form
         className="row"
         onSubmit={(e) => {
