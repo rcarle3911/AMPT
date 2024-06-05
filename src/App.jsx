@@ -1,8 +1,10 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
 import { Outlet } from "react-router-dom";
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import { Container } from "react-bootstrap";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
@@ -16,19 +18,19 @@ function App() {
   return (
     <div className="container">
       <h1>Welcome to the Mission Planning Tool!</h1>
-      <nav>
-        <ul>
-          <li>
-            <a href={`/upload`}>Upload</a>
-          </li>
-          <li>
-            <a href={`/scenario`}>Scenario</a>
-          </li>
-          <li>
-            <a href={`/report`}>Report</a>
-          </li>
-        </ul>
-      </nav>
+      <Navbar expand="lg" className="bg-body-tertiary">
+        <Container>
+          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="/upload">Upload</Nav.Link>
+              <Nav.Link href="/scenario">Scenario</Nav.Link>
+              <Nav.Link href="/report">Report</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
       <Outlet />
       <form
         className="row"
