@@ -5,19 +5,26 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Upload from "./Upload";
+import Scenario from "./Scenario";
+import Report from "./Report";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
+      { 
+        path: "/upload",
+        element: <Upload />,
+      },
       {
         path: "/scenario",
-        element: <div>Scenario</div>,
+        element: <Scenario />,
       },
       {
         path: "/report",
-        element: <div>Report</div>,
+        element: <Report />,
       },
     ]
   }

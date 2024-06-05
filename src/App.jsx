@@ -19,6 +19,9 @@ function App() {
       <nav>
         <ul>
           <li>
+            <a href={`/upload`}>Upload</a>
+          </li>
+          <li>
             <a href={`/scenario`}>Scenario</a>
           </li>
           <li>
