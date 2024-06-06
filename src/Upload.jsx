@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'react-bootstrap';
 
 function Upload() {
     // State to manage uploaded files and their progress
@@ -111,6 +112,9 @@ function Upload() {
                 {renderUploadSection("Upload TCA's file", 'tca')}
                 {renderUploadSection("Upload ROE for AOR's", 'roe')}
             </div>
+            <a href="/scenario">
+                <Button variant="primary" type="button">Scenario</Button>
+            </a>
         </div>
     );
 }
