@@ -16,23 +16,33 @@ const styles = StyleSheet.create({
     }
 });
 
+const sectionMaker = (sections) => {
+    // const sections = [1, 2, 3, 4];
+    const output = [];
+    for (let i = 0; i <= sections.length; i++) {
+        output.push(
+            <View style={styles.section}>
+                <Text>{sections[i]}</Text>
+            </View>
+        );
+    }
+    return output;
+}
+
+
 // Create Document Component
-const MyDocument = () => (
+const MyDocument = ({ sections }) => (
     <Document>
         <Page size="A4" style={styles.page}>
-            <View style={styles.section}>
-                <Text>Testing Testing 123</Text>
-            </View>
-            <View style={styles.section}>
-                <Text>Section #2</Text>
-            </View>
+            {sectionMaker(sections)}
+
         </Page>
     </Document>
 );
 
-const PDFsheet = () => (
+const PDFsheet = ({ sections }) => (
     <PDFViewer>
-        <MyDocument />
+        <MyDocument sections={sections} />
     </PDFViewer>
 );
 

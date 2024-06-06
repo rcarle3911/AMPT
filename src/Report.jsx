@@ -2,7 +2,7 @@ import PDFsheet from "./Reports/ReportGen.jsx";
 
 function Report() {
     return (
-        <PDFsheet />
+        <PDFsheet sections={[1, 2, 3, 4]} />
     );
 }
 
