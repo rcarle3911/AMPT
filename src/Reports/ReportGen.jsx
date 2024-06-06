@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 // Create styles
 const styles = StyleSheet.create({
     page: {
-        flexDirection: 'row',
+        flexDirection: 'col',
         color: 'black'
     },
     section: {
@@ -42,7 +42,7 @@ const MyDocument = ({ sections }) => (
 
 const PDFsheet = ({ sections }) => (
     <PDFViewer width="100%" height="1000px" fontFamily="monospace">
-        <MyDocument sections={sections} className="pdf"/>
+        <MyDocument sections={sections} className="pdf" />
     </PDFViewer>
 );
 
