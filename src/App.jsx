@@ -17,7 +17,7 @@ function App() {
 
   return (
     <Container >
-      <h1>Welcome to the Mission Planning Tool!</h1>
+      <h1>Accelerated Mission Planning Tool!</h1>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
           <Navbar.Brand href="#home">Menu</Navbar.Brand>
@@ -32,24 +32,7 @@ function App() {
         </Container>
       </Navbar>
       <Outlet />
-      {/* <form
-        className="row"
-        onSubmit={(e) => {
-          e.preventDefault();
-          greet();
-        }}
-      >
-        <input
-          id="greet-input"
-          onChange={(e) => setName(e.currentTarget.value)}
-          placeholder="Enter a name..."
-        />
-        <button type="submit">Greet</button>
-      </form> */}
-
-      {/* <p>{greetMsg}</p> */}
-
-  </Container>      
+    </Container>
   );
 }
 
