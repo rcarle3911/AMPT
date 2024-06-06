@@ -21,13 +21,20 @@
   -webkit-text-size-adjust: 100%;
 }
 
-.container {
+/* .container {
   margin: 0;
+  height: 100%;
+  width: 100%;
   padding-top: 10vh;
+  padding-bottom: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+} */
+
+.reportContainer {
+  min-height: 100vh;
 }
 
 .logo {

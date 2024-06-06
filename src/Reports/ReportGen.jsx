@@ -41,8 +41,8 @@ const MyDocument = ({ sections }) => (
 );
 
 const PDFsheet = ({ sections }) => (
-    <PDFViewer>
-        <MyDocument sections={sections} />
+    <PDFViewer width="100%" height="1000px" fontFamily="monospace">
+        <MyDocument sections={sections} className="pdf"/>
     </PDFViewer>
 );
 

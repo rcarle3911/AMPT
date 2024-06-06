@@ -16,7 +16,7 @@ function App() {
   }
 
   return (
-    <div className="container">
+    <Container >
       <h1>Welcome to the Mission Planning Tool!</h1>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
@@ -32,7 +32,7 @@ function App() {
         </Container>
       </Navbar>
       <Outlet />
-      <form
+      {/* <form
         className="row"
         onSubmit={(e) => {
           e.preventDefault();
@@ -45,12 +45,11 @@ function App() {
           placeholder="Enter a name..."
         />
         <button type="submit">Greet</button>
-      </form>
+      </form> */}
 
-      <p>{greetMsg}</p>
+      {/* <p>{greetMsg}</p> */}
 
-      
-    </div>
+  </Container>      
   );
 }
 
